@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <p></p>
+    <script>
+        const p = document.querySelector("p"),
+              input = document.querySelector("input");
+        input.addEventListener("blur", ()=>{
+            const number = input.value.split(",");
+            const arr = number.map(item=> +item);
+            let sum = 0;
+            arr.forEach(item=>{
+                sum+=item;
+            });
+            p.textContent = sum/arr.length;
+        });
+    </script>
+</body>
+</html>

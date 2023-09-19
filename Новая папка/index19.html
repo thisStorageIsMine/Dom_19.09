@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" readonly>
+    <button>Сгенерировать</button>
+    <script>
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+        let rand = ()=>{
+            return Math.floor(Math.random()*246);
+        }
+        button.addEventListener("click", ()=>{
+            input.value = "";
+            for (let index = 0; index < 9; index++) {
+                input.value += String.fromCharCode(rand());
+            }
+        });
+    </script>
+</body>
+</html>

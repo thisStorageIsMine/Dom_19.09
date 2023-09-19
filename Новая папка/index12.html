@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://kip.eljur.ru/journal-messages-action">Текст</a> <br>
+    <a href="https://codepen.io/Hyperplexed/pen/zYWvXMM">Текст</a>
+
+    <script>
+        const a = document.querySelectorAll("a");
+        a.forEach(item=>{
+            item.textContent +=  `(${item.href})`;
+        });
+    </script>
+</body>
+</html>

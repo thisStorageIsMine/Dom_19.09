@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="a" placeholder="a">
+    <input type="text" class="b" placeholder="b">
+    <input type="text" class="c" placeholder="c">
+    <button>Решить</button>
+    <p>Тут ответ</p>
+    <script>
+        const a = document.querySelector(".a");
+        const b = document.querySelector(".b");
+        const c = document.querySelector(".c");
+        const button = document.querySelector("button");
+        const p = document.querySelector("p");
+        button.addEventListener("click", ()=>{
+            d = (Number(b.value)**2)-4*(+a.value)*(+c.value);
+            if(d<0){p.textContent="Корней нет"}
+            else{
+                const x1 = (-(+b.value)+Math.sqrt(d))/(2*(+a.value));
+                const x2 = (-(+b.value)-Math.sqrt(d))/(2*(+a.value));
+                if(x1===x2){
+                    p.textContent = "x = "+ x1;
+                } else{
+                    p.textContent = "x1 = "+ x1 + " x2 = " + x2;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

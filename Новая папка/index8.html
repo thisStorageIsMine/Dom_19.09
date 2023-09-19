@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="fio">
+
+    <script>
+        const fio = document.querySelector(".fio");
+        fio.addEventListener("blur", ()=>{
+            const arr = fio.value.split(".");
+            fio.value = arr.reverse().join("-");
+        });
+    </script>
+</body>
+</html>

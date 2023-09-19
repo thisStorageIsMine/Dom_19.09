@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Число">
+    <button>Летс го</button>
+    <p>Его факториал</p>
+    <script>
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+        const p = document.querySelector("p");
+        function factorial(number){
+            if(number===1 || number===0){
+                return 1;
+            }
+            return number*factorial(number-1);
+        }
+        button.addEventListener("click", ()=>{
+            p.textContent = factorial(+input.value);
+        });
+    </script>
+</body>
+</html>

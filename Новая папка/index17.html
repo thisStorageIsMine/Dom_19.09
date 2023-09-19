@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" readonly>
+    <hr>
+    <p>Абзац 1</p>
+    <p>Абзац 2</p>
+    <script>
+        let counter = 0;
+        const input = document.querySelector("input");
+        const p = document.querySelectorAll("p");
+        input.value=counter;
+        p.forEach(item=>{
+            item.addEventListener("click", ()=>{
+                input.value=++counter;
+            });
+        });
+    </script>
+</body>
+</html>

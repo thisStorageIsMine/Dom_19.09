@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="input-1">
+    <input type="text" class="input-2">
+    <hr>
+    <p></p>
+    <button>Тыкать сюда!</button>
+    <script>
+        const btn = document.querySelector("button"),
+            input1 = document.querySelector(".input-1"),
+            input2 = document.querySelector(".input-2"),
+            p = document.querySelector("p")
+        btn.addEventListener("click",()=>{
+            p.textContent = +input1.value + +input2.value;
+        });
+    </script>
+</body>
+</html>

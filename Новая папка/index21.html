@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Температура в Фаренгейтах">
+    <button>Перевести</button>
+    <p>Температура в цельсиях</p>
+    <script>
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+        const p = document.querySelector("p");
+        button.addEventListener("click", ()=>{
+            p.textContent = (input.value-32)*(5/9);
+        });
+    </script>
+</body>
+</html>

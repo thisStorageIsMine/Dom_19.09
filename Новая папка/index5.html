@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="fio">
+    <input type="text" class="name" readonly>
+    <input type="text" class="suname" readonly>
+    <input type="text" class="otchestvo" readonly>
+    <script>
+        const fio = document.querySelector(".fio"),
+              name = document.querySelector(".name"),
+              suname = document.querySelector(".suname"),
+              otchestvo = document.querySelector(".otchestvo");
+        fio.addEventListener("blur", ()=>{
+            const arr = fio.value.split(" ");
+            name.value = arr[0];
+            suname.value = arr[1];
+            otchestvo.value = arr[2];
+        });
+    </script>
+</body>
+</html>

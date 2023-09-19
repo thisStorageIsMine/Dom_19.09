@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="By" class="type">  
+    <p></p>  
+    <script>
+        const input = document.querySelector(".type");
+        const p = document.querySelector("p");
+
+        input.addEventListener("blur", ()=>{
+            p.textContent += input.value;
+        });
+    </script>
+</body>
+</html>

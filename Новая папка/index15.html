@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="date">
+
+    <script>
+        const date = document.querySelector(".date");
+        const weekday = ["вс","пн","вт","ср","чт","пт","сб"];
+        date.addEventListener("blur", ()=>{
+            let inputDate = date.value.split(".");
+            let x = new Date(inputDate[2],inputDate[1]-1,inputDate[0]).getDay();
+            date.value = weekday[x];
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Текст</p>
+
+    <p>Больше текста</p>
+
+    <p>тект</p>
+
+    <button>Тыкать сюда</button>
+    <script>
+        let p = document.querySelectorAll('p');
+        let button = document.querySelector('button');
+        button.onclick = () => {
+
+        for (let i = 0; i < p.length; i++) {
+            p[i].textContent += ' ' + i;
+        }
+
+        }
+    </script>
+</body>
+</html>

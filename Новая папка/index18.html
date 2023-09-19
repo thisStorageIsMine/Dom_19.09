@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus minima id iure dicta necessitatibus illum neque eaque nobis excepturi quaerat, nemo, enim ipsa dolore velit vitae vero deserunt pariatur veniam.
+    Id error, asperiores non ipsa quos officiis nesciunt earum aliquam voluptatum quibusdam quis nemo aut in totam, fuga voluptas laudantium natus quod! Cupiditate, quo. Laudantium quis in numquam molestiae harum?
+    Magni atque eius, hic eum vero eaque distinctio minus itaque quae accusamus velit odio quos quibusdam dolorem dolorum ducimus. Rerum neque excepturi explicabo aliquid amet exercitationem, inventore cumque molestias? Perferendis.
+    Dolorum voluptas corporis quae. Fugiat quam ad culpa vel eos perspiciatis fugit molestiae corrupti voluptas, doloribus illo iusto eum molestias laboriosam odit iste, distinctio similique veniam minus vero itaque accusantium?
+    Ullam fuga tempora, quasi consectetur suscipit a itaque quam ea ab cupiditate ex? Non, cupiditate optio! Quia expedita quasi, officiis provident laborum rerum autem sunt deserunt! Natus optio laboriosam id!
+    Autem ducimus, cum, corrupti maiores porro veniam vero odit dolor eaque iste possimus vitae iusto! Minus accusantium illo soluta velit error vero voluptatum, laudantium, repudiandae omnis incidunt distinctio consequatur quia!
+    Vel minus nulla, vero recusandae doloribus ipsam ea, maiores inventore totam, quos corporis reprehenderit. Ad facilis maxime officiis earum suscipit aut, autem itaque, sunt voluptates, ratione debitis. Non, minima consectetur?
+    Quos adipisci maiores aspernatur aut cum repudiandae, similique facilis nam, quaerat asperiores harum laborum accusantium, laudantium magni magnam! Distinctio rem ipsa animi dolor corrupti voluptatem ratione consequuntur impedit voluptatibus possimus!
+    Dolorem totam numquam hic aspernatur. Cum libero fuga esse, dolor quos sequi tempore voluptate officia vitae nisi sapiente aliquam maxime provident adipisci suscipit, maiores illo aut mollitia cumque. Laborum, ab.
+    Unde eius quis fuga? Incidunt obcaecati ut veritatis enim illo consequuntur laborum quos illum ad in suscipit corporis explicabo nihil deserunt dolor magnam, autem minus possimus, error est accusamus animi.
+    Nulla expedita, voluptatum quos fugiat suscipit eligendi eos, dignissimos in magnam, magni tempora tenetur similique deleniti quod aperiam quis. Sed quas quo nulla at modi molestiae, eius nesciunt veritatis dolorum!
+    Est suscipit officiis, temporibus nulla possimus ab laborum eos vel, eveniet autem error fugiat eius. Quaerat, facere minima praesentium recusandae officiis sed doloremque velit, commodi fugit, amet quo veniam magnam.
+    Veniam quos, eum minima expedita nobis tempore laudantium voluptas error. Amet, eos? Laboriosam nihil error pariatur ab odit fugiat ratione exercitationem totam repellat, necessitatibus ea. Sint magnam magni qui numquam!</div>
+    <hr>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <hr>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur!</div>
+    <script>
+        const divs = document.querySelectorAll("div");
+        divs.forEach(item=>{
+            const divTextLength = item.textContent.split(" ").length;
+            if(divTextLength >10){
+                item.textContent = item.textContent.split(" ").slice(0,11) + "...";
+            }
+        });
+    </script>
+</body>
+</html>

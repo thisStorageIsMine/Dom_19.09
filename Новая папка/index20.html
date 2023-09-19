@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" >
+    <button>Перемещать</button>
+    <script>
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+        let rand = (number)=>{
+            return Math.floor(Math.random()*number);
+        }
+        
+        
+        button.addEventListener("click", ()=>{
+            let arr = input.value.split("");
+            let arrLength = arr.length;
+            input.value = ""
+            let answer = [];
+            for (let index = 0; index < arrLength; index++) {
+                answer.push(arr.splice(rand(arr.length),1));
+            }
+            input.value = answer.join("");
+        });
+    </script>
+</body>
+</html>
